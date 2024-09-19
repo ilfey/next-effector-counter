@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Технологии
 
-## Getting Started
+- Next (with turbopack)
+- Effector
+- TailwindCSS
+- Typescript
+- ESLint
+- Ban
+- FSD
 
-First, run the development server:
+## Методология
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Используется методология FSD.
+
+### Правила
+
+- Если сегмент состоит из одного файла, то нельзя создавать директорию под этот сегмент. [Пример](/src/shared/factory.ts)
+- Разделение слов в наименованиях слайсов реализовывать через `-`.
+- Запрещены экспорты поумолчанию, если этого не требует Next.
+- Все компоненты должны реализовываться через стрелочные функции см. [Сниппеты](#сниппеты).
+
+## Сниппеты
+
+
+### rsc
+
+```tsx
+import React from 'react';
+
+export const $TM_FILENAME_BASE$ = () => {
+ return (
+  <div>
+   $END$
+  </div>
+ );
+};
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### rsi
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```tsx
+import React from 'react';
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+export const $TM_FILENAME_BASE$ = () => (
+  <div>
+    $END$
+  </div>
+);
 
-## Learn More
+```
 
-To learn more about Next.js, take a look at the following resources:
+### sep
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```tsx
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+/* ===== $END$ ===== */
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
