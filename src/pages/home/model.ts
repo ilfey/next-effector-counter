@@ -3,7 +3,7 @@ import {createGate} from "effector-react";
 import {createEvent, createStore} from "effector";
 
 export const homeModel = atom(() => {
-  const homeGate = createGate()
+  const HomeGate = createGate()
 
   const increment = createEvent()
   const decrement = createEvent()
@@ -15,7 +15,7 @@ export const homeModel = atom(() => {
     .on(decrement, state => state - 1)
 
   return {
-    homeGate,
+    HomeGate,
     $count,
     increment,
     decrement

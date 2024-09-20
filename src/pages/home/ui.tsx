@@ -3,7 +3,7 @@ import {useGate, useUnit} from "effector-react";
 import {homeModel} from "pages/home/model";
 
 export const HomePage = () => {
-  useGate(homeModel.homeGate)
+  useGate(homeModel.HomeGate)
 
   const {$count, increment, decrement} = useUnit({
     $count: homeModel.$count,

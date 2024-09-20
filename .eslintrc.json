@@ -1,4 +1,0 @@
-{
-  "plugins": ["effector"],
-  "extends": ["next/core-web-vitals", "next/typescript", "plugin:effector/react"]
-}
