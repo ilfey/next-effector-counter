@@ -4,25 +4,27 @@
   font: normal 600 var(--fz-md) / var(--lh-md) "Nunito Sans", sans-serif;
 
   &.primary {
-    color: var(--on-primary);
     background: var(--primary);
+    color: var(--on-primary);
   }
 }
 
-.page-title {
-  font: normal 700 var(--fz-2xl) / var(--lh-2xl) "Nunito Sans", sans-serif;
+.pageTitle {
+  font-weight: 700;
+  font-size: var(--fz-2xl);
+  line-height: var(--lh-2xl);
   text-align: center;
 }
 
 .counter {
-  &>.counter__title {
-    font: normal 700 var(--fz-xl) / var(--lh-xl) "Nunito Sans", sans-serif;
-    text-align: center;
-  }
-
-  &>.counter__actions-container {
+  & .counterActionsContainer {
     display: flex;
     justify-content: center;
     gap: 0.5rem;
+  }
+
+  & .counterTitle {
+    font: normal 700 var(--fz-xl) / var(--lh-xl) "Nunito Sans", sans-serif;
+    text-align: center;
   }
 }

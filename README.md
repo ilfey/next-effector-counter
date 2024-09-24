@@ -15,7 +15,6 @@ bun run dev
 
 - Next (with turbopack)
 - Effector
-- TailwindCSS
 - Typescript
 - ESLint
 - Bun

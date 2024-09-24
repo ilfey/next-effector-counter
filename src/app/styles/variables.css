@@ -1,0 +1,31 @@
+:root {
+   /*Radius*/
+  --radius-xs: 0.125rem;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+
+  /*Font size*/
+  --fz-xs: 0.75rem;
+  --fz-sm: 0.875rem;
+  --fz-md: 1rem;
+  --fz-lg: 1.125rem;
+  --fz-xl: 1.25rem;
+  --fz-2xl: 1.5rem;
+
+  /*Line height*/
+  --lh-xs: 1rem;
+  --lh-sm: 1.25rem;
+  --lh-md: 1.5rem;
+  --lh-lg: 1.75rem;
+  --lh-xl: 1.75rem;
+  --lh-2xl: 2rem;
+}
+
+:root.dark {
+  --primary: #9333ea;
+  --on-primary: #ffffff;
+  --surface: #0a0a0a;
+  --on-surface: #ffffff;
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 import {Seo} from './seo';
-import "./styles.scss"
+import styles from "./styles.module.css"
 
 type Props = {
   children: React.ReactNode
@@ -10,7 +10,7 @@ export const BaseLayout = ({children}: Props) => {
   return (
     <>
       <Seo/>
-      <div className="wrapper">
+      <div className={styles.wrapper}>
         <main className="">
           {children}
         </main>

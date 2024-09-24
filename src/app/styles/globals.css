@@ -11,7 +11,7 @@ html {
 body {
   background: var(--surface);
   color: var(--on-surface);
-  height: 200vh;
+  font: normal 400 var(--fz-md) / var(--lh-md) "Nunito Sans", sans-serif;
 }
 
 button {
