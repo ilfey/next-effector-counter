@@ -1,11 +1,10 @@
 import React from 'react';
 import {Html, Head, Main, NextScript} from "next/document";
-import {fontSans} from "app";
 
 export default () => (
-  <Html className={fontSans.variable} lang="en">
+  <Html className="dark" lang="en">
     <Head/>
-    <body className={`bg-surface text-on-surface font-sans`}>
+    <body>
     <Main/>
 
     <NextScript/>
