@@ -1,3 +1,3 @@
-import "app/styles/globals.css";
+import "app/styles/index.scss";
 
 export {App as default} from "app";

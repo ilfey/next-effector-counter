@@ -1,6 +1,7 @@
 import React from 'react';
 import {useGate, useUnit} from "effector-react";
 import {homeModel} from "pages/home/model";
+import "./styles.scss"
 
 export const HomePage = () => {
   useGate(homeModel.HomeGate)
@@ -13,19 +14,22 @@ export const HomePage = () => {
 
   return (
     <div className="">
-      <h1 className="text-2xl my-2">Next Effector Counter</h1>
+      <h1 className="page-title">Next Effector Counter</h1>
 
-      <h2 className="text-xl">Count: {$count}</h2>
-      <div className="inline-flex gap-2">
-        <button className="bg-primary rounded-md text-on-primary px-3 py-2 text-md hover:bg-primary/80"
-                onClick={decrement}>
-          Decrement
-        </button>
+      <div className="counter">
+        <h2 className="counter__title">Count: {$count}</h2>
 
-        <button className="bg-primary rounded-md text-on-primary px-3 py-2 text-md hover:bg-primary/80"
-                onClick={increment}>
-          Increment
-        </button>
+        <div className="counter__actions-container">
+          <button className="button primary"
+                  onClick={decrement}>
+            Decrement
+          </button>
+
+          <button className="button primary"
+                  onClick={increment}>
+            Increment
+          </button>
+        </div>
       </div>
     </div>
   );
